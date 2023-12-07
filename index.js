@@ -1,0 +1,31 @@
+const express = require('express');
+const cors = require('cors');
+const mongoose = require('mongoose');
+const register = require('./routes/register');
+const login = require('./routes/login');
+require('dotenv').config();
+const pokemons = require('./models/Pokemon');
+
+const app = express();
+
+app.use(express.json());
+app.use(cors());
+
+// auth route
+app.use("/api/register", register);
+app.use("/api/login", login);
+
+app.get('/pokemons', (req, res) => {
+  res.send(pokemons);
+})
+
+const PORT = process.env.PORT || 5000;
+const URI = process.env.DB_URI;
+
+
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
+
+mongoose.connect(URI).then(() => console.log("MongoDB Connected!"))
+.catch((err) => console.log("Failed", err.message));
