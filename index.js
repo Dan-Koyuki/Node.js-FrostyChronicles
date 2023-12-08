@@ -12,11 +12,12 @@ const pokemons = require('./models/Pokemon');
 
 const app = express();
 
-app.use(express.json());
 app.use(cors({
   origin: 'https://frontend-frosty.vercel.app', // Replace with your frontend URL
   credentials: true, // If your frontend sends credentials (cookies, authorization headers)
 }));
+
+app.use(express.json());
 
 // auth route
 app.use("/api/register", register);
