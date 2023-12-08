@@ -32,7 +32,21 @@ app.use(express.json());
 
 // Routes
 app.use("/api/register", register);
+app.options('/api/register', (req, res) => {
+  res.setHeader('Access-Control-Allow-Origin', '*'); // Replace '*' with your allowed origin
+  res.setHeader('Access-Control-Allow-Methods', 'POST'); // Specify allowed methods
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization'); // Specify allowed headers
+
+  res.sendStatus(200); // Respond with 200 OK for preflight requests
+});
 app.use("/api/login", login);
+app.options('/api/login', (req, res) => {
+  res.setHeader('Access-Control-Allow-Origin', '*'); // Replace '*' with your allowed origin
+  res.setHeader('Access-Control-Allow-Methods', 'POST'); // Specify allowed methods
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization'); // Specify allowed headers
+
+  res.sendStatus(200); // Respond with 200 OK for preflight requests
+});
 app.use("/api/createteam", createTeam);
 app.use("/api/fetchteam", fetchTeam);
 app.use("/api/addmember", addMember);
