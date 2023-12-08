@@ -1,53 +1,50 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const cors = require('cors');
-const register = require('./routes/register');
-const login = require('./routes/login');
-const createTeam = require('./routes/createTeam');
-const fetchTeam = require('./routes/fetchTeam');
-const addMember = require('./routes/addMember');
-const fetchMember = require('./routes/fetchMember');
-require('dotenv').config();
-const pokemons = require('./models/Pokemon');
+const express = require("express");
+const mongoose = require("mongoose");
+const cors = require("cors");
+const register = require("./routes/register");
+const login = require("./routes/login");
+const createTeam = require("./routes/createTeam");
+const fetchTeam = require("./routes/fetchTeam");
+const addMember = require("./routes/addMember");
+const fetchMember = require("./routes/fetchMember");
+require("dotenv").config();
+const pokemons = require("./models/Pokemon");
 
 const app = express();
 
 const corsOptions = {
-  origin: 'https://gorgeous-tulumba-45e926.netlify.app',
+  origin: "https://gorgeous-tulumba-45e926.netlify.app",
 };
 
 app.use(cors(corsOptions));
 app.use(express.json());
 
-app.options('*', cors(corsOptions));
+app.options("*", cors(corsOptions));
 
-// auth route
+// Routes
 app.use("/api/register", register);
 app.use("/api/login", login);
+app.use("/api/createteam", createTeam);
+app.use("/api/fetchteam", fetchTeam);
+app.use("/api/addmember", addMember);
+app.use("/api/fetchmember", fetchMember);
 
-// team route
-app.use('/api/createteam', createTeam);
-app.use('/api/fetchteam', fetchTeam);
-
-// team member route
-app.use('/api/addmember', addMember);
-app.use('/api/fetchmember', fetchMember);
-
-app.get('/', (req, res) => {
+app.get("/", (req, res) => {
   res.send("Server Working!");
-})
+});
 
-app.get('/pokemons', (req, res) => {
+app.get("/pokemons", (req, res) => {
   res.send(pokemons);
-})
+});
 
 const PORT = process.env.PORT || 5000;
 const URI = process.env.DB_URI;
 
+mongoose
+  .connect(URI)
+  .then(() => console.log("MongoDB Connected!"))
+  .catch((err) => console.log("Failed", err.message));
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
-
-mongoose.connect(URI).then(() => console.log("MongoDB Connected!"))
-.catch((err) => console.log("Failed", err.message));
