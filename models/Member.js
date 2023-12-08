@@ -104,4 +104,4 @@ const memberSchema = new mongoose.Schema({
 
 const Member = mongoose.model("Pokemon", memberSchema);
 
-exports.Member = Member;
+module.exports = mongoose.model("Pokemon", memberSchema);
