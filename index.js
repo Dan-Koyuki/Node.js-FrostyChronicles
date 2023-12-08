@@ -1,6 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const cors = require("cors");
+const allowCors = require('./utils/allowCors');
 const register = require("./routes/register");
 const login = require("./routes/login");
 const createTeam = require("./routes/createTeam");
@@ -12,14 +12,8 @@ const pokemons = require("./models/Pokemon");
 
 const app = express();
 
-const corsOptions = {
-  origin: "https://gorgeous-tulumba-45e926.netlify.app",
-};
-
-app.use(cors(corsOptions));
+app.use(allowCors());
 app.use(express.json());
-
-app.options("*", cors(corsOptions));
 
 // Routes
 app.use("/api/register", register);
