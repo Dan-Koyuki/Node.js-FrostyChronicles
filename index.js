@@ -20,10 +20,22 @@ const app = express();
 
 app.use(cors());
 
-app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*"); // Update to match the domain you will make the request from
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+// Middleware to enable CORS
+app.use((req, res, next) => {
+  // Allow requests from all origins
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  // Define allowed methods
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+  // Define allowed headers
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  // Continue to the next middleware
   next();
+});
+
+// Route for handling preflight requests (OPTIONS)
+app.options('*', (req, res) => {
+  // Respond to preflight requests
+  res.status(200).end();
 });
 
 app.use(express.json());
