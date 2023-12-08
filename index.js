@@ -12,13 +12,20 @@ const pokemons = require("./models/Pokemon");
 
 const app = express();
 
-const corsOption = {
-  origin: '*',
-  credentials:true,
-  optionSuccessStatus:200
-}
+// const corsOption = {
+//   origin: '*',
+//   credentials:true,
+//   optionSuccessStatus:200
+// }
 
-app.use(cors(corsOption));
+app.use(cors());
+
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "https://frontend-frosty-dan-koyukis-projects.vercel.app"); // Update to match the domain you will make the request from
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
 app.use(express.json());
 
 // Routes
