@@ -1,6 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const httpProxy = require('http-proxy');
+const cors = require('cors');
 const register = require('./routes/register');
 const login = require('./routes/login');
 const createTeam = require('./routes/createTeam');
@@ -11,24 +11,8 @@ require('dotenv').config();
 const pokemons = require('./models/Pokemon');
 
 const app = express();
-// const proxy = httpProxy.createProxyServer();
 
-// app.use((req, res, next) => {
-//   // Handle CORS headers
-//   res.setHeader('Access-Control-Allow-Origin', '*');
-//   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
-//   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-//   res.setHeader('Access-Control-Allow-Credentials', true);
-//   next();
-// });
-
-// // Define a route to proxy requests to the backend API
-// app.all('/api/*', (req, res) => {
-//   proxy.web(req, res, {
-//     target: 'https://frosty-backend.vercel.app',
-//     changeOrigin: true,
-//   });
-// });
+app.use(cors());
 app.use(express.json());
 
 // auth route
