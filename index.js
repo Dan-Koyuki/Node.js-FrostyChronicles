@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 // const allowCors = require('./utils/allowCors');
+const cors = require('cors');
 const register = require("./routes/register");
 const login = require("./routes/login");
 const createTeam = require("./routes/createTeam");
@@ -11,6 +12,9 @@ require("dotenv").config();
 const pokemons = require("./models/Pokemon");
 
 const app = express();
+
+app.use(cors());
+app.options('*', cors()) 
 
 // Middleware function to handle CORS headers
 const allowCors = (req, res, next) => {
@@ -47,6 +51,7 @@ app.options('/api/login', (req, res) => {
 
   res.sendStatus(200); // Respond with 200 OK for preflight requests
 });
+
 app.use("/api/createteam", createTeam);
 app.use("/api/fetchteam", fetchTeam);
 app.use("/api/addmember", addMember);
