@@ -3,6 +3,10 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const register = require('./routes/register');
 const login = require('./routes/login');
+const createTeam = require('./routes/createTeam');
+const fetchTeam = require('./routes/fetchTeam');
+const addMember = require('./routes/addMember');
+const fetchMember = require('./routes/fetchMember');
 require('dotenv').config();
 const pokemons = require('./models/Pokemon');
 
@@ -14,6 +18,18 @@ app.use(cors());
 // auth route
 app.use("/api/register", register);
 app.use("/api/login", login);
+
+// team route
+app.use('/api/createteam', createTeam);
+app.use('/api/fetchteam', fetchTeam);
+
+// team member route
+app.use('/api/addmember', addMember);
+app.use('/api/fetchmember', fetchMember);
+
+app.get('/', (req, res) => {
+  res.send("Server Working!");
+})
 
 app.get('/pokemons', (req, res) => {
   res.send(pokemons);
