@@ -1,6 +1,6 @@
 const joi = require('joi');
 const express = require('express');
-const { Member } = require('../models/Member');
+const Member = require('../models/Member');
 
 const router = express.Router();
 

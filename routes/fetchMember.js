@@ -1,4 +1,4 @@
-const { Member } = require('../models/Member');
+const Member = require('../models/Member');
 const joi = require('joi');
 const express = require('express');
 
