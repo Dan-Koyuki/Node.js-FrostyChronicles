@@ -1,6 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const allowCors = require('./utils/allowCors');
+// const allowCors = require('./utils/allowCors');
 const register = require("./routes/register");
 const login = require("./routes/login");
 const createTeam = require("./routes/createTeam");
@@ -12,7 +12,22 @@ const pokemons = require("./models/Pokemon");
 
 const app = express();
 
-app.use(allowCors());
+// Middleware function to handle CORS headers
+const allowCors = (req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', '*'); // Replace '*' with the allowed origin(s)
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
+
+  // Handle preflight requests
+  if (req.method === 'OPTIONS') {
+    res.sendStatus(200);
+  } else {
+    next(); // Continue with the request chain
+  }
+};
+
+// Apply CORS middleware to all routes
+app.use(allowCors);
 app.use(express.json());
 
 // Routes
