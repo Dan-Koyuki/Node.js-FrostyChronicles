@@ -7,7 +7,7 @@ const corsMiddleware = require('../utils/corsMiddleware');
 
 const router = express.Router();
 
-router.use(corsMiddleware);
+// router.use(corsMiddleware);
 
 router.post('/', async (req, res) => {
   // check input requirement
