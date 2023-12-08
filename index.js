@@ -19,6 +19,8 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use(express.json());
 
+app.options('*', cors(corsOptions));
+
 // auth route
 app.use("/api/register", register);
 app.use("/api/login", login);
