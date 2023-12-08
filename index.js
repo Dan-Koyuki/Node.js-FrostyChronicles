@@ -13,7 +13,7 @@ const pokemons = require('./models/Pokemon');
 const app = express();
 
 const corsOptions = {
-  origin: 'https://frontend-frosty.vercel.app',
+  origin: 'https://gorgeous-tulumba-45e926.netlify.app',
 };
 
 app.use(cors(corsOptions));
