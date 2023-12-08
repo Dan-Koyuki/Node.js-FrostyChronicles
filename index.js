@@ -1,5 +1,4 @@
 const express = require('express');
-const cors = require('cors');
 const mongoose = require('mongoose');
 const register = require('./routes/register');
 const login = require('./routes/login');
@@ -11,11 +10,6 @@ require('dotenv').config();
 const pokemons = require('./models/Pokemon');
 
 const app = express();
-
-// app.use(cors({
-//   origin: 'https://frontend-frosty.vercel.app/', // Replace with your frontend URL
-//   credentials: true, // If your frontend sends credentials (cookies, authorization headers)
-// }));
 
 app.use(express.json());
 

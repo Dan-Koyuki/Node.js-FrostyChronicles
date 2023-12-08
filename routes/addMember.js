@@ -1,11 +1,8 @@
 const joi = require('joi');
 const express = require('express');
 const Member = require('../models/Member');
-const corsMiddleware = require('../utils/corsMiddleware');
 
 const router = express.Router();
-
-// router.use(corsMiddleware);
 
 router.post('/', async (req, res) => {
   const schema = joi.object({

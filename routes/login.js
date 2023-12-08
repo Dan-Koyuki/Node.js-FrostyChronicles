@@ -3,11 +3,8 @@ const joi = require('joi');
 const express = require('express');
 const User = require('../models/User');
 const genAuthToken = require('../utils/genAuthToken');
-const corsMiddleware = require('../utils/corsMiddleware');
 
 const router = express.Router();
-
-// router.use(corsMiddleware);
 
 router.post('/', async (req, res) => {
   // check input requirement
