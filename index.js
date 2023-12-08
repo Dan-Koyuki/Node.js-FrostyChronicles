@@ -12,7 +12,13 @@ const pokemons = require("./models/Pokemon");
 
 const app = express();
 
-app.use(cors());
+const corsOption = {
+  origin: '*',
+  credentials:true,
+  optionSuccessStatus:200
+}
+
+app.use(cors(corsOption));
 app.use(express.json());
 
 // Routes
