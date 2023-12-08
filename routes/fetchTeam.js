@@ -1,8 +1,11 @@
 const Team = require('../models/Team');
 const joi = require('joi');
 const express = require('express');
+const corsMiddleware = require('../utils/corsMiddleware');
 
 const router = express.Router();
+
+router.use(corsMiddleware);
 
 router.post('/', async (req, res) => {
 
