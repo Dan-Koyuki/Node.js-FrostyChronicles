@@ -7,6 +7,7 @@ const createTeam = require("./routes/createTeam");
 const fetchTeam = require("./routes/fetchTeam");
 const addMember = require("./routes/addMember");
 const fetchMember = require("./routes/fetchMember");
+const updateMember = require("./routes/updateMember");
 require("dotenv").config();
 const pokemons = require("./models/Pokemon");
 
