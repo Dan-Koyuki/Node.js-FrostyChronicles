@@ -6,6 +6,8 @@ const router = express.Router();
 
 router.post('/', async (req, res) => {
   const schema = joi.object({
+    teamID: joi.string().required(),
+    pokemonName: joi.string().required(),
     ability: joi.string(),
     item: joi.string(),
     ivHP: joi.number().min(0).max(31),
