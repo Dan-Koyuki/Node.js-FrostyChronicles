@@ -10,6 +10,7 @@ const fetchMember = require("./routes/fetchMember");
 const updateMember = require("./routes/updateMember");
 require("dotenv").config();
 const pokemons = require("./models/Pokemon");
+const moves = require("./models/Moves");
 
 const app = express();
 
@@ -56,6 +57,10 @@ app.get("/", (req, res) => {
 
 app.get("/pokemons", (req, res) => {
   res.send(pokemons);
+});
+
+app.get("/moves", (req, res) => {
+  res.send(moves);
 });
 
 const PORT = process.env.PORT || 5000;
