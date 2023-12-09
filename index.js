@@ -46,6 +46,7 @@ app.use("/api/login", login);
 app.use("/api/createteam", createTeam);
 app.use("/api/fetchteam", fetchTeam);
 app.use("/api/addmember", addMember);
+app.use("/api/updatemember", updateMember);
 app.use("/api/fetchmember", fetchMember);
 
 app.get("/", (req, res) => {
