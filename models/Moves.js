@@ -80,3 +80,5 @@ const moves = [
     }
   }
 ]
+
+module.exports = moves;
