@@ -11,6 +11,8 @@ const updateMember = require("./routes/updateMember");
 require("dotenv").config();
 const pokemons = require("./models/Pokemon");
 const moves = require("./models/Moves");
+const types = require("./models/Type");
+const teams = require('./models/StaticTeam');
 
 const app = express();
 
@@ -61,6 +63,14 @@ app.get("/pokemons", (req, res) => {
 
 app.get("/moves", (req, res) => {
   res.send(moves);
+});
+
+app.get("/types", (req, res) => {
+  res.send(types);
+});
+
+app.get("/static-team", (req, res) => {
+  res.send(teams);
 });
 
 const PORT = process.env.PORT || 5000;
