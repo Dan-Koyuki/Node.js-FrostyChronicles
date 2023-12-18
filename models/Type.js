@@ -163,4 +163,4 @@ const types = [
   }
 ]
 
-export default types;
+module.exports = types
