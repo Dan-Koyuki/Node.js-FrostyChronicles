@@ -5,6 +5,11 @@ const memberSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  level: {
+    type: Number,
+    min: 1,
+    max: 100
+  },
   pokemonName: {
     type: String,
     required: true,

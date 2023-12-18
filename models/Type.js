@@ -5,7 +5,7 @@ const types = [
       double: [],
       noDamage: ["ghost"],
       half: ["rock", "steel"],
-      
+      neutral: ['normal', 'fire', 'water', 'grass', 'electric', 'ice', 'ground', 'flying', 'fighting', 'fairy', 'dragon', 'bug', 'dark', 'psychic', 'poison']
     }
   },
   {
@@ -13,7 +13,8 @@ const types = [
     effect: {
       double: ["grass", "ice", "bug", "steel"],
       noDamage: [],
-      half: ["fire", "water", "dragon", "rock"]
+      half: ["fire", "water", "dragon", "rock"],
+      neutral: ['normal', 'electric', 'ground', 'flying', 'figthing', 'fairy', 'ghost', 'dark', 'psychic', 'poison']
     }
   },
   {
@@ -21,7 +22,8 @@ const types = [
     effect: {
       double: ["fire", "ground", "rock"],
       noDamage: [],
-      half: ["water", "grass", "dragon"]
+      half: ["water", "grass", "dragon"],
+      neutral: ['normal', 'electric', 'ice', 'flying', 'fighting', 'steel', 'fairy', 'bug', 'ghost', 'dark', 'psychic', 'poison']
     }
   },
   {
@@ -29,7 +31,8 @@ const types = [
     effect: {
       double: ["water", "ground", "rock"],
       noDamage: [],
-      half: ["fire", "grass", "poison", "flying", "bug", "dragon", "steel"]
+      half: ["fire", "grass", "poison", "flying", "bug", "dragon", "steel"],
+      neutral: ['normal', 'electric', 'ice', 'fighting', 'fairy', 'ghost', 'dark', 'psychic']
     }
   },
   {
@@ -37,7 +40,8 @@ const types = [
     effect: {
       double: ["water", "flying"],
       noDamage: ["ground"],
-      half: ["grass", "electric", "dragon"]
+      half: ["grass", "electric", "dragon"],
+      neutral: ['normal', 'fire', 'ice', 'rock', 'fighting', 'steel', 'fairy', 'bug', 'ghost', 'dark', 'psychic', 'poison']
     }
   },
   {
@@ -45,15 +49,17 @@ const types = [
     effect: {
       double: ["grass", "ground", "flying", "dragon"],
       noDamage: [],
-      half: ["fire", "water", "ice", "steel"]
+      half: ["fire", "water", "ice", "steel"],
+      neutral: ['normal', 'electric', 'rock', 'fighting', 'fairy', 'bug', 'ghost', 'dark', 'psychic','poison']
     }
   },
   {
     TypeID: "fighting",
-    "fighting": {
+    effect: {
       double: ["normal", "ice", "rock", "dark", "steel"],
       noDamage: ["ghost"],
-      half: ["poison", "flying", "psychic", "bug", "fairy"]
+      half: ["poison", "flying", "psychic", "bug", "fairy"],
+      neutral: ['fire', 'water', 'grass', 'electric', 'ground', 'fighting', 'dragon']
     }
   },
   {
@@ -61,7 +67,8 @@ const types = [
     effect: {
       double: ["grass", "fairy"],
       noDamage: ["steel"],
-      half: ["poison", "ground", "rock", "ghost"]
+      half: ["poison", "ground", "rock", "ghost"],
+      neutral: ['normal', 'fire', 'water', 'electric', 'ice', 'flying', 'figthing', 'dragon', 'dark', 'psychic', 'bug']
     }
   },
   {
@@ -69,7 +76,8 @@ const types = [
     effect: {
       double: ["fire", "electric", "poison", "rock", "steel"],
       noDamage: ["flying"],
-      half: ["grass", "bug"]
+      half: ["grass", "bug"],
+      neutral: ['normal', 'water', 'ice', 'ground', 'fighting', 'fairy', 'dragon', 'ghost', 'dark', 'psychic']
     }
   },
   {
@@ -77,7 +85,8 @@ const types = [
     effect: {
       double: ["grass", "fighting", "bug"],
       noDamage: [],
-      half: ["electric", "rock", "steel"]
+      half: ["electric", "rock", "steel"],
+      neutral: ['normal', 'fire', 'water', 'ice', 'ground', 'flying', 'fairy', 'dragon', 'ghost', 'dark', 'psychic', 'poison']
     }
   },
   {
@@ -85,7 +94,8 @@ const types = [
     effect: {
       double: ["fighting", "poison"],
       noDamage: ["dark"],
-      half: ["psychic", "steel"]
+      half: ["psychic", "steel"],
+      neutral: ['normal', 'fire', 'water', 'grass', 'electric', 'ice', 'rock', 'ground', 'flying', 'fairy', 'dragon', 'bug', 'ghost']
     }
   },
   {
@@ -93,7 +103,8 @@ const types = [
     effect: {
       double: ["grass", "psychic", "dark"],
       noDamage: [],
-      half: ["fire", "fighting", "poison", "flying", "ghost", "steel", "fairy"]
+      half: ["fire", "fighting", "poison", "flying", "ghost", "steel", "fairy"],
+      neutral: ['normal', 'bug', 'water', 'electric', 'dragon', 'rock', 'ground', 'ice']
     }
   },
   {
@@ -101,7 +112,8 @@ const types = [
     effect: {
       double: ["fire", "ice", "flying", "bug"],
       noDamage: [],
-      half: ["fighting", "ground", "steel"]
+      half: ["fighting", "ground", "steel"],
+      neutral: ['normal', 'water', 'grass', 'electric', 'psychic', 'dark', 'dragon', 'fairy', 'poison', 'ghost', 'rock']
     }
   },
   {
@@ -109,7 +121,8 @@ const types = [
     effect: {
       double: ["psychic", "ghost"],
       noDamage: ["normal"],
-      half: ["dark"]
+      half: ["dark"],
+      neutral: ['fire', 'water', 'grass', 'electric', 'ice', 'rock', 'ground', 'steel', 'fighting', 'dragon', 'fairy', 'bug', 'flying', 'poison']
     }
   },
   {
@@ -117,7 +130,8 @@ const types = [
     effect: {
       double: ["dragon"],
       noDamage: ["fairy"],
-      half: ["steel"]
+      half: ["steel"],
+      neutral: ['normal', 'fire', 'water', 'grass', 'electric', 'ice', 'flying', 'rock', 'ground', 'poison', 'bug', 'psychic', 'fighting', 'dark', 'ghost']
     }
   },
   {
@@ -125,7 +139,8 @@ const types = [
     effect: {
       double: ["psychic", "ghost"],
       noDamage: [],
-      half: ["fighting", "dark", "fairy"]
+      half: ["fighting", "dark", "fairy"],
+      neutral: ['normal', 'fire', 'water', 'grass', 'ice', 'electric', 'rock', 'ground', 'flying', 'bug', 'dragon', 'steel', 'poison']
     }
   },
   {
@@ -133,7 +148,8 @@ const types = [
     effect: {
       double: ["ice", "rock", "fairy"],
       noDamage: [],
-      half: ["fire", "water", "electric", "steel"]
+      half: ["fire", "water", "electric", "steel"],
+      neutral: ['normal', 'grass', 'fighting', 'flying', 'psychic', 'dark', 'ghost', 'ground', 'dragon', 'bug', 'poison']
     }
   },
   {
@@ -141,9 +157,10 @@ const types = [
     effect: {
       double: ["fighting", "dragon", "dark"],
       noDamage: [],
-      half: ["fire", "poison", "steel"]
+      half: ["fire", "poison", "steel"],
+      neutral: ['fairy', 'normal', 'water', 'grass', 'psychic', 'bug', 'electric', 'ice', 'flying', 'ghost', 'rock', 'ground']
     }
   }
 ]
 
-module.exports = types;
+export default types;
