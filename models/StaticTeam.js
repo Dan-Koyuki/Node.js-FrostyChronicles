@@ -18,6 +18,7 @@ const Teams = [
         evSPD: 0,
         evSPE: 252,
         moves: ["Flamethrower", "Air Slash", "Solar Beam", "Scorching Sands"],
+        sprite: "https://raw.githubusercontent.com/Dan-Koyuki/Image-Pokemon_Sprite/master/6-front-n.gif"
       }, 
       {
         name: "Venusaur",
@@ -34,7 +35,8 @@ const Teams = [
         evSPA: 252,
         evSPD: 0,
         evSPE: 252,
-        moves: ["Sludge Bomb", "Giga Drain", "Earth Power", "Weather Ball"]
+        moves: ["Sludge Bomb", "Giga Drain", "Earth Power", "Weather Ball"],
+        sprite: "https://raw.githubusercontent.com/Dan-Koyuki/Image-Pokemon_Sprite/master/3-front-n.gif"
       },
       {
         name: "Blastoise",
@@ -51,7 +53,8 @@ const Teams = [
         evSPA: 252,
         evSPD: 0,
         evSPE: 252,
-        moves: ["Hydro Pump", "Rapid Spin", "Ice Beam", "Dark Pulse"]
+        moves: ["Hydro Pump", "Rapid Spin", "Ice Beam", "Dark Pulse"],
+        sprite: "https://raw.githubusercontent.com/Dan-Koyuki/Image-Pokemon_Sprite/master/9-front-n.gif"
       },
       {
         name: "Pikachu",
@@ -68,7 +71,8 @@ const Teams = [
         evSPA: 0,
         evSPD: 0,
         evSPE: 252,
-        moves: ["Volt Tackle", "Surf", "Volt Switch", "Extreme Speed"]
+        moves: ["Volt Tackle", "Surf", "Volt Switch", "Extreme Speed"],
+        sprite: "https://raw.githubusercontent.com/Dan-Koyuki/Image-Pokemon_Sprite/master/25-front-n.gif"
       }, 
       {
         name: "Snorlax",
@@ -85,7 +89,8 @@ const Teams = [
         evSPA: 0,
         evSPD: 90,
         evSPE: 0,
-        moves: ["Body Slam", "Fire Punch", "Thunder Punch", "Ice Punch"]
+        moves: ["Body Slam", "Fire Punch", "Thunder Punch", "Ice Punch"],
+        sprite: "https://raw.githubusercontent.com/Dan-Koyuki/Image-Pokemon_Sprite/master/143-front-n.gif"
       },
       {
         name: "Articuno",
@@ -102,7 +107,8 @@ const Teams = [
         evSPA: 252,
         evSPD: 0,
         evSPE: 252,
-        moves: ["Freeze-Dry", "Air Slash", "Hurricane", "Freezing Glare"]
+        moves: ["Freeze-Dry", "Air Slash", "Hurricane", "Freezing Glare"],
+        sprite: "https://raw.githubusercontent.com/Dan-Koyuki/Image-Pokemon_Sprite/master/144-front-n.gif"
       }
     ]
   },
@@ -124,7 +130,8 @@ const Teams = [
         evSPA: 0,
         evSPD: 0,
         evSPE: 252,
-        moves: ["Earthquake", "Waterfall", "Bounce", "Crunch"]
+        moves: ["Earthquake", "Waterfall", "Bounce", "Crunch"],
+        sprite: "https://raw.githubusercontent.com/Dan-Koyuki/Image-Pokemon_Sprite/master/130-front-n.gif"
       }, 
       {
         name: "Dragonite",
@@ -141,7 +148,8 @@ const Teams = [
         evSPA: 52,
         evSPD: 0,
         evSPE: 252,
-        moves: ["Draco Meteor", "Outrage", "Earthquake", "Extreme Speed"]
+        moves: ["Draco Meteor", "Outrage", "Earthquake", "Extreme Speed"],
+        sprite: "https://raw.githubusercontent.com/Dan-Koyuki/Image-Pokemon_Sprite/master/149-front-n.gif"
       },
       {
         name: "Aerodactly",
@@ -158,7 +166,8 @@ const Teams = [
         evSPA: 0,
         evSPD: 0,
         evSPE: 252,
-        moves: ["Rock Slide", "Aerial Ace", "Earthquake", "Stone Edge"]
+        moves: ["Rock Slide", "Aerial Ace", "Earthquake", "Stone Edge"],
+        sprite: "https://raw.githubusercontent.com/Dan-Koyuki/Image-Pokemon_Sprite/master/142-front-n.gif"
       },
       {
         name: "Zapdos",
@@ -175,7 +184,8 @@ const Teams = [
         evSPA: 252,
         evSPD: 0,
         evSPE: 252,
-        moves: ["Hurricane", "Thunder", "Volt Switch", "Heat Wave"]
+        moves: ["Hurricane", "Thunder", "Volt Switch", "Heat Wave"],
+        sprite: "https://raw.githubusercontent.com/Dan-Koyuki/Image-Pokemon_Sprite/master/145-front-n.gif"
       }, 
       {
         name: "Moltres",
@@ -192,7 +202,8 @@ const Teams = [
         evSPA: 252,
         evSPD: 0,
         evSPE: 252,
-        moves: ["Fire Blast", "Hurricane", "Extrasensory", "Burn Up"]
+        moves: ["Fire Blast", "Hurricane", "Extrasensory", "Burn Up"],
+        sprite: "https://raw.githubusercontent.com/Dan-Koyuki/Image-Pokemon_Sprite/master/146-front-n.gif"
       },
       {
         name: "Articuno",
@@ -209,7 +220,8 @@ const Teams = [
         evSPA: 252,
         evSPD: 0,
         evSPE: 252,
-        moves: ["Freeze-Dry", "Air Slash", "Hurricane", "Freezing Glare"]
+        moves: ["Freeze-Dry", "Air Slash", "Hurricane", "Freezing Glare"],
+        sprite: "https://raw.githubusercontent.com/Dan-Koyuki/Image-Pokemon_Sprite/master/144-front-n.gif"
       }
     ]
   }
