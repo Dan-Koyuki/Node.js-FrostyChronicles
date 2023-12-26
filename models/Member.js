@@ -14,84 +14,81 @@ const memberSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  ability: {
-    type: String,
-  },
-  item: {
-    type: String,
-  },
   ivHP: {
     type: Number,
     min: 0,
     max: 31,
+    default: 0
   },
   ivATK: {
     type: Number,
     min: 0,
     max: 31,
+    default: 0
   },
   ivDEF: {
     type: Number,
     min: 0,
     max: 31,
+    default: 0
   },
   ivSPA: {
     type: Number,
     min: 0,
     max: 31,
+    default: 0
   },
   ivSPD: {
     type: Number,
     min: 0,
     max: 31,
+    default: 0
   },
   ivSPE: {
     type: Number,
     min: 0,
     max: 31,
+    default: 0
   },
   evHP: {
     type: Number,
     min: 0,
     max: 252,
+    default: 0
   },
   evATK: {
     type: Number,
     min: 0,
     max: 252,
+    default: 0
   },
   evDEF: {
     type: Number,
     min: 0,
     max: 252,
+    default: 0
   },
   evSPA: {
     type: Number,
     min: 0,
     max: 252,
+    default: 0
   },
   evSPD: {
     type: Number,
     min: 0,
     max: 252,
+    default: 0
   },
   evSPE: {
     type: Number,
     min: 0,
     max: 252,
+    default: 0
   },
-  moves1: {
-    type: String,
-  },
-  moves2: {
-    type: String,
-  },
-  moves3: {
-    type: String,
-  },
-  moves4: {
-    type: String,
-  },
+  moves: [],
+  spriteFront: String,
+  spriteBack: String,
 });
 
 const Member = mongoose.model("Pokemon", memberSchema);

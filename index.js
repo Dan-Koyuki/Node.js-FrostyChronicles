@@ -3,16 +3,13 @@ const mongoose = require("mongoose");
 const cors = require('cors');
 const register = require("./routes/register");
 const login = require("./routes/login");
-const createTeam = require("./routes/createTeam");
-const fetchTeam = require("./routes/fetchTeam");
-const addMember = require("./routes/addMember");
-const fetchMember = require("./routes/fetchMember");
-const updateMember = require("./routes/updateMember");
 require("dotenv").config();
 const pokemons = require("./models/Pokemon");
 const moves = require("./models/Moves");
 const types = require("./models/Type");
 const teams = require('./models/StaticTeam');
+const RTeam = require('./routes/RTeams');
+const RMember = require('./routes/RMembers');
 
 const app = express();
 
@@ -47,11 +44,8 @@ app.use(express.json());
 // Routes
 app.use("/api/register", register);
 app.use("/api/login", login);
-app.use("/api/createteam", createTeam);
-app.use("/api/fetchteam", fetchTeam);
-app.use("/api/addmember", addMember);
-app.use("/api/updatemember", updateMember);
-app.use("/api/fetchmember", fetchMember);
+app.use('/api/teams', RTeam);
+app.use('/api/members', RMember);
 
 app.get("/", (req, res) => {
   res.send("Server Working!");
