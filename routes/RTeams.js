@@ -42,7 +42,6 @@ router.get('/get', async (req, res) => {
     }
 
     const teams = await Team.find({ userID });
-    console.log("teams is ",teams);
 
     res.status(200).send(teams);
   } catch (error) {

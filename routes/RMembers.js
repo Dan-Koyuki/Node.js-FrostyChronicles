@@ -66,10 +66,13 @@ router.get('/find/:id', async(req, res) => {
 // Get All Member of a Team
 router.get('/find', async(req, res) => {
   try {
-    const teamID = req.body.teamID;
+    console.log("teamID", req.query.teamID)
+    const teamID = req.query.teamID;
     let members;
 
     members = await Member.find({teamID: teamID});
+
+    console.log("members is", members);
 
     res.status(200).send(members);
   } catch (error){
