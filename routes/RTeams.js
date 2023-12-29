@@ -8,7 +8,6 @@ const router = express.Router();
 router.post('/create', async(req, res) => {
   // check input
   const schema = joi.object({
-    _id: joi.string().required,
     name: joi.string().min(3).max(30).required(),
     userID: joi.string().required()
   });
@@ -22,7 +21,6 @@ router.post('/create', async(req, res) => {
 
   // create new model if team doesnt exist
   team = new Team({
-    _id: req.body._id,
     name: req.body.name,
     userID: req.body.userID
   });

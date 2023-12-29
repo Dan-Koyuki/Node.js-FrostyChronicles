@@ -38,14 +38,17 @@ router.post('/add', async(req, res) => {
 router.put('/:id', async(req, res) => {
   // this will update the pokemon stat, like the iv, ev, and moves
   try {
+    console.log(":id", req.body);
     const updateMember = await Member.findByIdAndUpdate(
       req.params.id,
       {
         $set: {
-          ...req.body.member
+          ...req.body.updatePokemon
         }
       }, { new: true }
     );
+    
+    console.log("Updated Member: ", updateMember);
 
     res.status(200).send(updateMember);
   } catch (error) {
@@ -66,13 +69,10 @@ router.get('/find/:id', async(req, res) => {
 // Get All Member of a Team
 router.get('/find', async(req, res) => {
   try {
-    console.log("teamID", req.query.teamID)
     const teamID = req.query.teamID;
     let members;
 
     members = await Member.find({teamID: teamID});
-
-    console.log("members is", members);
 
     res.status(200).send(members);
   } catch (error){
